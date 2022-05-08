@@ -7,7 +7,7 @@
     src: url("/fonts/BALLAD.otf");
 }
 .Card{
-    @apply w-5/6 lg:w-1/3 h-full rounded-lg shadow-md flex-none transform transition-all hover:-translate-y-2 hover:shadow-xl
+    @apply w-5/6 lg:w-1/3 h-full rounded-xl shadow-md flex-none transform transition-all hover:-translate-y-2 hover:shadow-xl
 }
 .CardPrice{
     @apply bg-red-500 h-1/3 w-full lg:h-5/6 self-center lg:w-1/3 rounded-3xl justify-center flex p-10
