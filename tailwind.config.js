@@ -10,6 +10,11 @@ module.exports = {
         'img1': "url('img/palmira.jpg')",
         'img2': "url('img/ahr.jpg')",
         'img3': "url('img/stfe.jpg')"
+      },
+      colors:{
+        'primary': '#54428E',
+        'secondary': '#FFF',
+        'tertiary': '#FF0022'
       }
     },
   },
