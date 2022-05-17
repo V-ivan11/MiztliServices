@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
+    <script src="./js/functions.js"></script>
     <title>Miztli Services</title>
     <link rel="icon" href="img/icon.svg">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -205,7 +206,7 @@
                                 visibilidad de tu marca</p>
                         </div>
                         <div class="hidden md:flex basis-6/12 right-10">
-                            <p class="font-lexend text-xl text-right">Contamos con los conocimientos y el apoyo de
+                            <p class="font-lexend text-2xl text-right">Contamos con los conocimientos y el apoyo de
                                 diseñadores para poder brindarte el mejor diseño para tu sitio web y tus redes sociales
                                 con la finalidad de ofrecer la experiencia perfecta para los clientes de tu negocio.</p>
                         </div>
@@ -239,7 +240,7 @@
                                 clientes</p>
                         </div>
                         <div class="hidden md:flex basis-6/12">
-                            <p class="font-lexend text-xl">Obtén un mejor acercamiento con quienes visiten tu negocio
+                            <p class="font-lexend text-2xl">Obtén un mejor acercamiento con quienes visiten tu negocio
                                 mediante un sitio web y la administración de redes sociales que ofrecemos.</p>
                         </div>
                     </div>
@@ -344,7 +345,7 @@
 
         <section>
             <!--Precios-->
-            <div class="relative w-screen h-screen bg-primary" id="precio">
+            <div class="relative w-screen h-auto bg-primary" id="precio">
                 <div class="w-screen h-1/6 pt-14">
                     <p class="text-xl md:text-3xl text-center leading-loose font-semibold text-secondary">¿Qué plan se
                         te
@@ -353,14 +354,24 @@
                 </div>
                 <div
                     class="relative h-5/6 w-screen flex flex-col lg:flex-row px-10 lg:px-32 py-10 space-y-10 lg:space-y-0">
-                    <div class="CardPrice">
+                    <div class="text-sm font-medium text-center">
+                        <ul class="flex flex-wrap -mb-px">
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(1)" id="btn_sites" class="inline-block p-4 text-myBlue rounded-t-lg border-b-2 border-myBlue active">Sitio Web</button>
+                            </li>
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(2)" id="btn_media" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300">Redes sociales</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="cardLeft" class="CardPrice">
                         1
                     </div>
-                    <div
-                        class="self-center h-1/3 w-full rounded-3xl justify-center flex p-10 lg:h-full lg:w-1/3 bg-[#FF0022]">
+                    <div id="cardMain"
+                        class="self-center h-auto w-full rounded-3xl justify-center flex p-10 lg:h-full lg:w-1/3 bg-tertiary">
                         Principal
                     </div>
-                    <div class="CardPrice">
+                    <div id="cardRight" class="CardPrice">
                         2
                     </div>
                 </div>
@@ -384,7 +395,7 @@
 
                     <div class="flex basis-1/2 w-full">
                         <div class="w-full h-full flex flex-col justify-center">
-                            <p class="text-secondary font-lexend m-5 text-base md:text-2xl md:mx-20">
+                            <p class="text-secondary font-lexend m-5 text-base md:text-2xl lg:text-3xl text-justify md:mx-20">
                                 Somos un equipo de programadores especializados en el
                                 desarrollo de páginas web con los conocimientos necesarios para brindarte la tecnología
                                 y
