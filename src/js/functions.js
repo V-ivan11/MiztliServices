@@ -9,6 +9,8 @@ function cambiarCategoria(option){
     var on = "inline-block p-4 text-myBlue rounded-t-lg border-b-2 border-myBlue active";
     var off = "inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300"
 
+    var planWebBasic = ""
+
     if(option == 1){
         btn_sites.className = on;
         btn_media.className = off;
