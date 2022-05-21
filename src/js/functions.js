@@ -1,4 +1,22 @@
-function cambiarCategoria(option){
+import {saveEmail} from './firebase.js'
+
+window.addEventListener('DOMContentLoaded', () => {
+
+})
+
+const form =  document.getElementById('suscripcion');
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const email = form['email'];
+
+    saveEmail(email.value)
+
+    form.reset()
+    
+})
+
+function cambiarCategoria(option) {
     var btn_sites = document.getElementById("btn_sites");
     var btn_media = document.getElementById("btn_media");
 
@@ -11,14 +29,14 @@ function cambiarCategoria(option){
 
     var planWebBasic = ""
 
-    if(option == 1){
+    if (option == 1) {
         btn_sites.className = on;
         btn_media.className = off;
 
         cardLeft.innerHTML = "web";
         cardMain.innerHTML = "web";
         cardRight.innerHTML = "web";
-    }else{
+    } else {
         btn_sites.className = off;
         btn_media.className = on;
 

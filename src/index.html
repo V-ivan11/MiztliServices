@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
-    <script src="./js/functions.js"></script>
     <title>Miztli Service</title>
     <link rel="icon" href="img/icon.svg">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -208,7 +207,8 @@
                                 visibilidad de tu marca</p>
                         </div>
                         <div class="basis-6/12 right-10">
-                            <p class="font-lexend text-base md:text-xl lg:text-2xl text-right">Contamos con los conocimientos y el apoyo de
+                            <p class="font-lexend text-base md:text-xl lg:text-2xl text-right">Contamos con los
+                                conocimientos y el apoyo de
                                 diseñadores para poder brindarte el mejor diseño para tu sitio web y tus redes sociales
                                 con la finalidad de ofrecer la experiencia perfecta para los clientes de tu negocio.</p>
                         </div>
@@ -242,7 +242,8 @@
                                 clientes</p>
                         </div>
                         <div class="basis-6/12">
-                            <p class="font-lexend text-base md:text-xl lg:text-2xl">Obtén un mejor acercamiento con quienes visiten tu negocio
+                            <p class="font-lexend text-base md:text-xl lg:text-2xl">Obtén un mejor acercamiento con
+                                quienes visiten tu negocio
                                 mediante un sitio web y la administración de redes sociales que ofrecemos.</p>
                         </div>
                     </div>
@@ -629,16 +630,18 @@
                     </div>
                 </div>
                 <p>Suscríbete</p>
-                <div class="flex flex-row w-full">
-                    <input type="email" name="email" placeholder="nombre@email.com" id="email"
-                        class="font-lexend p-2 border-0 w-10/12">
-                    <button class="py-2 px-4 h-auto bg-tertiary">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 19.143 31">
-                            <path id="Icon_material-navigate-next" data-name="Icon material-navigate-next"
-                                d="M16.528,9l-3.642,3.642L24.717,24.5,12.885,36.358,16.528,40l15.5-15.5Z"
-                                transform="translate(-12.885 -9)" fill="#fff" />
-                        </svg>
-                    </button>
+                <div>
+                    <form class="flex flex-row w-full" id="suscripcion">
+                        <input type="email" name="email" placeholder="nombre@email.com" id="email"
+                            class="font-lexend p-2 border-0 w-10/12 text-primary">
+                        <button class="py-2 px-4 h-auto bg-tertiary" id="btnSuscripcion">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 19.143 31">
+                                <path id="Icon_material-navigate-next" data-name="Icon material-navigate-next"
+                                    d="M16.528,9l-3.642,3.642L24.717,24.5,12.885,36.358,16.528,40l15.5-15.5Z"
+                                    transform="translate(-12.885 -9)" fill="#fff" />
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="h-1/4 md:w-1/4 grid-rows-5 space-y-2 font-lexend justify-around hidden md:grid">
@@ -648,7 +651,6 @@
                 <a href="#precio">Precio</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#contacto">Contacto</a>
-
 
             </div>
             <div class="h-1/4 md:w-1/4 pt-8 md:pt-0">
@@ -689,6 +691,8 @@
             </div>
         </div>
     </footer>
+
+    <script type="module" src="./js/functions.js"></script>
 </body>
 
 </html>
