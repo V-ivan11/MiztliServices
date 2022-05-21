@@ -9,6 +9,17 @@
     <title>Miztli Service</title>
     <link rel="icon" href="img/icon.svg">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function fireSweetAlert() {
+            Swal.fire({
+                title: 'Enviado!!',
+                width: 600,
+                padding: '3em',
+                color: '#54428E',
+            })
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -426,9 +437,9 @@
                         <p class="bg-primary text-secondary font-bold self-center text-sm p-4 rounded-xl">$3499*mxn</p>
                     </div>
                     <div id="cardMain"
-                        class="self-center h-auto w-full space-y-5 rounded-3xl justify-center flex flex-col p-10 lg:h-full lg:w-1/3 bg-tertiary">
+                        class="self-center mx-5 h-auto w-full space-y-5 rounded-3xl justify-center flex flex-col p-10 lg:h-full lg:w-1/3 bg-tertiary">
                         <p class="self-center">Miztli Web +</p>
-                        <div class="flex flex-col space-y-2 justify-start font-lexend ">
+                        <div class="flex flex-col space-y-2 justify-start font-lexend">
                             <div class="flex space-x-2">
                                 <span class="material-symbols-outlined text-green-400 ">
                                     check_circle
@@ -631,8 +642,8 @@
                 </div>
                 <p>Suscríbete</p>
                 <div>
-                    <form class="flex flex-row w-full" id="suscripcion">
-                        <input type="email" name="email" placeholder="nombre@email.com" id="email"
+                    <form class="flex flex-row w-full" id="suscripcion" onsubmit="fireSweetAlert()">
+                        <input type="email" required name="email" placeholder="nombre@email.com" id="email"
                             class="font-lexend p-2 border-0 w-10/12 text-primary">
                         <button class="py-2 px-4 h-auto bg-tertiary" id="btnSuscripcion">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 19.143 31">

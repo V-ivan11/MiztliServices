@@ -1,10 +1,11 @@
 import {saveEmail} from './firebase.js'
 
-window.addEventListener('DOMContentLoaded', () => {
-
-})
+const alerts = window.sweetalert2;
 
 const form =  document.getElementById('suscripcion');
+const tabSites = document.getElementById('btn_sites');
+const tabMedia = document.getElementById('btn_media');
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -14,7 +15,9 @@ form.addEventListener('submit', (e) => {
 
     form.reset()
     
-})
+});
+
+
 
 function cambiarCategoria(option) {
     var btn_sites = document.getElementById("btn_sites");
