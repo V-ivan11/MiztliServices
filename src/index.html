@@ -24,15 +24,27 @@
         function cambiarCategoria(option) {
             var divWeb = document.getElementById("precioWeb");
             var divSocial = document.getElementById("precioSocial");
+            var divDiseno = document.getElementById("precioDiseno");
 
             if (option == 1) {
                 let hidden = divWeb.getAttribute("hidden");
                 divWeb.removeAttribute("hidden");
                 divSocial.setAttribute("hidden", "hidden");
+                divDiseno.setAttribute("hidden", "hidden");
             } else {
-                let hidden = divSocial.getAttribute("hidden");
-                divSocial.removeAttribute("hidden");
-                divWeb.setAttribute("hidden", "hidden");
+                if (option == 2){
+                    let hidden = divSocial.getAttribute("hidden");
+                    divSocial.removeAttribute("hidden");
+                    divWeb.setAttribute("hidden", "hidden");
+                    divDiseno.setAttribute("hidden", "hidden");
+                }
+                else{
+                    let hidden = divWeb.getAttribute("hidden");
+                    divDiseno.removeAttribute("hidden");
+                    divSocial.setAttribute("hidden", "hidden");
+                    divWeb.setAttribute("hidden", "hidden");
+                }
+                
             }
         }
     </script>
@@ -371,21 +383,20 @@
                 </div>
             </div>
         </section>
+
         <!--Nuestros proyectos-->
 
-        <section>
+        <section id="precio">
             <!--Precios-->
-            <div class="relative w-screen h-auto bg-primary" id="precio">
+            <div class="relative w-screen h-auto bg-primary" id="precioWeb">
                 <div class="w-screen h-1/6 pt-14">
-                    <p class="text-xl md:text-3xl text-center leading-loose font-semibold text-secondary">¿Qué plan se
-                        te
-                        adecúa más?
+                    <p class="text-xl md:text-3xl text-center leading-loose font-semibold text-secondary">¿Qué ofrecemos?
                     </p>
                 </div>
                 <div
                     class="relative h-5/6 w-screen flex flex-col lg:flex-row px-10 lg:px-32 py-10 space-y-10 lg:space-y-0">
                     <div class="text-sm font-medium text-center">
-                        <ul class="flex flex-wrap -mb-px">
+                        <ul class="flex flex-row lg:flex-col -mb-px">
                             <li class="mr-2">
                                 <button onclick="cambiarCategoria(1)" id="btn_sites"
                                     class="inline-block p-4 text-myBlue rounded-t-lg border-b-2 border-myBlue active">Sitio
@@ -395,6 +406,10 @@
                                 <button onclick="cambiarCategoria(2)" id="btn_media"
                                     class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300">Redes
                                     sociales</button>
+                            </li>
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(3)" id="btn_media"
+                                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300">Diseño</button>
                             </li>
                         </ul>
                     </div>
@@ -530,15 +545,13 @@
             </div>
             <div hidden class="relative w-screen h-auto bg-primary" id="precioSocial">
                 <div class="w-screen h-1/6 pt-14">
-                    <p class="text-xl md:text-3xl text-center leading-loose font-semibold text-secondary">¿Qué plan se
-                        te
-                        adecúa más?
+                    <p class="text-xl md:text-3xl text-center leading-loose font-semibold text-secondary">¿Qué ofrecemos?
                     </p>
                 </div>
                 <div
                     class="relative h-5/6 w-screen flex flex-col lg:flex-row px-10 lg:px-32 py-10 space-y-10 lg:space-y-0">
                     <div class="text-sm font-medium text-center">
-                        <ul class="flex flex-wrap -mb-px">
+                        <ul class="flex flex-row lg:flex-col -mb-px">
                             <li class="mr-2">
                                 <button onclick="cambiarCategoria(1)" id="btn_sites"
                                     class="inline-block p-4 rounded-t-lg border-b-2 hover:border-gray-300 hover:text-gray-300">Sitio
@@ -548,6 +561,10 @@
                                 <button onclick="cambiarCategoria(2)" id="btn_media"
                                     class="inline-block p-4 rounded-t-lg text-myBlue border-myBlue border-b-2 active">Redes
                                     sociales</button>
+                            </li>
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(3)" id="btn_media"
+                                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300">Diseño</button>
                             </li>
                         </ul>
                     </div>
@@ -602,6 +619,91 @@
                             target="_blank" class="bg-primary text-secondary self-center text-sm p-4 rounded-xl">
                             Contáctenos
                         </a>
+                    </div>
+                </div>
+            </div>
+            <div hidden class="relative w-screen h-auto bg-primary" id="precioDiseno">
+                <div class="w-screen h-1/6 pt-14">
+                    <p class="text-xl md:text-3xl text-center leading-loose font-semibold text-secondary">¿Qué ofrecemos?
+                    </p>
+                </div>
+                <div
+                    class="relative h-5/6 w-screen flex flex-col lg:flex-row px-10 lg:px-32 py-10 space-y-10 lg:space-y-0">
+                    <div class="text-sm font-medium text-center">
+                        <ul class="flex flex-row lg:flex-col">
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(1)" id="btn_sites"
+                                    class="inline-block p-4 rounded-t-lg border-b-2 hover:border-gray-300 hover:text-gray-300">Sitio
+                                    Web</button>
+                            </li>
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(2)" id="btn_media"
+                                    class="inline-block p-4 rounded-t-lg border-b-2 hover:border-gray-300 hover:text-gray-300">Redes
+                                    sociales</button>
+                            </li>
+                            <li class="mr-2">
+                                <button onclick="cambiarCategoria(3)" id="btn_media"
+                                    class="inline-block p-4 rounded-t-lg text-myBlue border-myBlue border-b-2 active">Diseño</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="cardLeft" class="CardPrice">
+                        <p class="self-center">Folletos</p>
+                        <div class="flex flex-col space-y-2 justify-start font-lexend ">
+                            <div class="flex space-x-2">
+                                <span class="material-symbols-outlined text-green-400 ">
+                                    check_circle
+                                </span>
+                                <p>Folleto simple, díptico o tríptico</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="material-symbols-outlined text-green-400">
+                                    check_circle
+                                </span>
+                                <p>Diseño de menús para restaurantes</p>
+                            </div>
+
+                        </div>
+                        <p class="bg-primary text-secondary font-bold self-center text-sm p-4 rounded-xl">desde $1499*mxn</p>
+                    </div>
+                    <div id="cardMain"
+                        class="CardPrice mx-5">
+                        <p class="self-center">Volantes</p>
+                        <div class="flex flex-col space-y-2 justify-start font-lexend">
+                            <div class="flex space-x-2">
+                                <span class="material-symbols-outlined text-green-400 ">
+                                    check_circle
+                                </span>
+                                <p>Volante simple o doble cara</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="material-symbols-outlined text-green-400">
+                                    check_circle
+                                </span>
+                                <p>Tarjetas de presentación</p>
+                            </div>
+
+                        </div>
+                        <p class="bg-primary text-secondary font-bold self-center text-sm p-4 rounded-xl">desde $899*mxn</p>
+                    </div>
+                    <div id="cardRight" class="CardPrice">
+                        <p class="self-center">Enfocado</p>
+                        <div class="flex flex-col space-y-2 justify-start font-lexend ">
+                            <div class="flex space-x-2">
+                                <span class="material-symbols-outlined text-green-400 ">
+                                    check_circle
+                                </span>
+                                <p>Logotipos</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="material-symbols-outlined text-green-400">
+                                    check_circle
+                                </span>
+                                <p>Sesiones fotográficas al negocio.</p>
+                            </div>
+
+                        </div>
+                        <p class="bg-primary text-secondary font-bold self-center text-sm p-4 rounded-xl">Precio a tratar</p>
                     </div>
                 </div>
             </div>
